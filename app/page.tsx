@@ -10,7 +10,7 @@ export default function Home() {
     <main className="">
       <section
         id="landing"
-        className="flex h-full min-h-[600px] w-full flex-col py-10 pt-[90px]"
+        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px]"
       >
         <div className="flex flex-1 flex-col items-center justify-center py-6 sm:flex-row sm:gap-10">
           <Image
@@ -52,6 +52,50 @@ export default function Home() {
           </p>
         </div>
         <CollegeAnimate />
+
+        <Image
+          src="/wave.png"
+          alt=""
+          width={1080}
+          height={1080}
+          className="absolute  bottom-0 z-[1] w-full "
+        />
+      </section>
+
+      <section className=" relative flex  min-h-screen items-center justify-center ">
+        <div className="relative flex h-[700px] w-[70%] items-center justify-center ">
+          <Image
+            src="/legacy.png"
+            alt=""
+            width={1080}
+            height={1080}
+            className="duraction-[3000] absolute left-0 top-0 h-[300px] w-[300px] animate-spin"
+            style={{ animationDuration: '4s' }}
+          />
+          <div className="z-[1] h-[200px] w-[100vw] md:h-[400px] md:w-[50vw] ">
+            <iframe
+              className="h-full w-full rounded-xl "
+              src="https://www.youtube.com/embed/QaXcVAkamxc"
+              title="CROSSROADS&#39;23 | After Movie | Mar Baselios College of Engineering and Technology"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+          <Image
+            src="/legacy.png"
+            alt=""
+            width={1080}
+            height={1080}
+            className="duraction-[3000] absolute bottom-0 right-0 h-[300px] w-[300px] animate-spin"
+            style={{ animationDuration: '4s' }}
+          />
+        </div>
+        <Image
+          src="/wave.png"
+          alt=""
+          width={1080}
+          height={1080}
+          className="absolute bottom-0 z-[1] w-full rotate-180"
+        />
       </section>
     </main>
   );
