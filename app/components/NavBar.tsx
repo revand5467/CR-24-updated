@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function NavBar() {
   return (
-    <nav className="border-b-2 border-gray p-4 md:px-10 flex justify-between">
+    <nav className="absolute top-0 flex w-full justify-between border-b border-gray p-4 md:px-10">
       <Image src="/logo_small.svg" alt="CR 24 logo" width={30} height={30} />
       <div className="flex items-center gap-3 md:gap-7">
         <a className="text-sm" href="">
@@ -12,7 +12,7 @@ export default function NavBar() {
         <a className="text-sm" href="">
           Buy Merch
         </a>
-        <button className="text-sm bg-pink px-4 py-2 rounded-md">Events</button>
+        <button className="rounded-md bg-pink px-4 py-2 text-sm">Events</button>
       </div>
     </nav>
   );
