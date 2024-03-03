@@ -37,8 +37,8 @@ export default function Home() {
         <div className="mx-5 h-3 w-3 rounded-full bg-pink" />
         <p className="text-xl">#ChromaticChaos</p>
       </Marquee>
-      <section className="relative flex min-h-[900px] flex-col items-center justify-between">
-        <div className="flex h-full flex-1 flex-col items-center justify-center">
+      <section className="relative mt-11 flex  flex-col items-center justify-between">
+        <div className="flex h-full flex-1 flex-col items-center justify-end">
           <h1 className="heading">OUR LEGACY</h1>
           <h2 className="heading flex gap-1 text-3xl text-white">
             2005 - <Image width={60} height={60} src="/infinity.svg" alt="infinity" />
