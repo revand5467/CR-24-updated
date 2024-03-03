@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
-      mohave: ['Mohave', 'sans-serif']
+      mohave: ['Mohave', 'sans-serif'],
+      pecita: ['Pecita']
     },
     extend: {
       colors: {

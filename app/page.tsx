@@ -3,6 +3,7 @@ import LogoLanding from '../public/logo_landing.svg';
 import Tiger from '../public/tiger.png';
 import CountdownTimer from './components/Countdown';
 import Marquee from 'react-fast-marquee';
+import CollegeAnimate from './components/CollegeAnimate';
 
 export default function Home() {
   return (
@@ -36,6 +37,22 @@ export default function Home() {
         <div className="mx-5 h-3 w-3 rounded-full bg-pink" />
         <p className="text-xl">#ChromaticChaos</p>
       </Marquee>
+      <section className="relative flex min-h-[900px] flex-col items-center justify-between">
+        <div className="flex h-full flex-1 flex-col items-center justify-center">
+          <h1 className="heading">OUR LEGACY</h1>
+          <h2 className="heading flex gap-1 text-3xl text-white">
+            2005 - <Image width={60} height={60} src="/infinity.svg" alt="infinity" />
+          </h2>
+          <p className="prose mt-6 text-center text-white">
+            The Techno-Cultural festival of MBCET aka, Crossroads has become an integral
+            part of the cultural calendar of Trivandrum since its launch in 2005. From
+            there it&rsquo;s centered to bring together students from different
+            backgrounds and cultures to celebrate their shared passion for creativity and
+            innovation.
+          </p>
+        </div>
+        <CollegeAnimate />
+      </section>
     </main>
   );
 }
