@@ -120,11 +120,11 @@ const events = [
 
 const cardVariants1: Variants = {
   offscreen: {
-    y: 300
+    y: 200
   },
   onscreen: {
     y: 50,
-    rotate: -10,
+    //rotate: -10,
     transition: {
       type: "spring",
       bounce: 0.4,
@@ -186,7 +186,7 @@ const Parallelogram = () => {
             key={index}
             //onViewportEnter={}
             className="relative flex-col sm:pl-3"
-            variants={cardVariants}
+            variants={cardVariants1}
             initial="offscreen"
             whileInView="onscreen"
             // animate={inView ? "visible" : "hidden"
