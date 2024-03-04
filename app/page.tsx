@@ -9,6 +9,8 @@ import FadeUp from './components/FadeUp';
 import Departmental from './components/Departments';
 import Events from './components/Events';
 import Parallelogram from './components/trial';
+import Loading from './components/Loading';
+
 
 export default function Home() {
   return (
