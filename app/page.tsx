@@ -1,11 +1,11 @@
-'use client';
-import Image from 'next/image';
-import LogoLanding from '../public/logo_landing.svg';
-import Tiger from '../public/tiger.png';
-import CountdownTimer from './components/Countdown';
-import Marquee from 'react-fast-marquee';
-import CollegeAnimate from './components/CollegeAnimate';
-import FadeUp from './components/FadeUp';
+import Image from "next/image";
+import LogoLanding from "../public/logo_landing.svg";
+import Tiger from "../public/tiger.png";
+import CountdownTimer from "./components/Countdown";
+import Marquee from "react-fast-marquee";
+import CollegeAnimate from "./components/CollegeAnimate";
+import FadeUp from "./components/FadeUp";
+import OurLegacyVideo from "./components/OurLegacyVideo";
 
 export default function Home() {
   return (
@@ -48,7 +48,7 @@ export default function Home() {
               width={1080}
               height={1080}
               className="absolute -left-[40px] -top-[30px] h-[30px] w-[30px] "
-              style={{ animationDuration: '4s' }}
+              style={{ animationDuration: "4s" }}
             />
 
             <h1 className="heading">OUR LEGACY</h1>
@@ -61,7 +61,7 @@ export default function Home() {
               width={1080}
               height={1080}
               className="absolute -bottom-[10px] -right-[20px] h-[30px] w-[30px] "
-              style={{ animationDuration: '4s' }}
+              style={{ animationDuration: "4s" }}
             />
           </div>
           <p className="prose mt-6 text-center text-white">
@@ -82,39 +82,7 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
-
-      <section className=" relative my-10  flex min-h-[300px] w-full items-center justify-center md:min-h-[700px]">
-        <div className="absolute top-0 h-full w-full ">
-          <div className="relative mx-auto flex h-[300px] items-center  justify-center md:h-[700px] md:w-[60vw] ">
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute left-0 top-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
-
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute bottom-0 right-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
-          </div>
-        </div>
-
-        <div className="z-[1] h-[200px] w-[80vw] md:h-[400px] md:w-[45vw] ">
-          <iframe
-            className="mx-auto h-full w-full rounded-xl "
-            src="https://www.youtube.com/embed/QaXcVAkamxc"
-            title="CROSSROADS&#39;23 | After Movie | Mar Baselios College of Engineering and Technology"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
-        </div>
-      </section>
+      <OurLegacyVideo />
     </main>
   );
 }
