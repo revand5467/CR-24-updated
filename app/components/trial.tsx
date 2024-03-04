@@ -96,7 +96,7 @@
 'use client';
 import './parallelogram.css';
 import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { useInView } from "react-intersection-observer";
 const events = [
@@ -118,6 +118,20 @@ const events = [
   },
 ];
 
+const cardVariants1: Variants = {
+  offscreen: {
+    y: 300
+  },
+  onscreen: {
+    y: 50,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+};
 const cardVariants = {
 
   hidden: {
@@ -170,11 +184,16 @@ const Parallelogram = () => {
         {events.map((e, index) => (
           <motion.div
             key={index}
+            //onViewportEnter={}
             className="relative flex-col sm:pl-3"
             variants={cardVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"
-            }
+            initial="offscreen"
+            whileInView="onscreen"
+            // animate={inView ? "visible" : "hidden"
+            // }
+            //whileInView={{ scale: 1.2 }}
+            viewport={{ once: true, amount: 0.8 }}
+            //onScroll={controls.start}
             //transition={{ duration: 4 , delay:2 }}
             whileHover={{ scale: 1.2 }}
             exit="hidden"
