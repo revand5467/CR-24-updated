@@ -7,13 +7,15 @@ import Marquee from 'react-fast-marquee';
 import CollegeAnimate from './components/CollegeAnimate';
 import FadeUp from './components/FadeUp';
 import Departmental from './components/Departments';
+import Events from './components/Events';
+import Parallelogram from './components/trial';
 
 export default function Home() {
   return (
     <main className="">
       <section
         id="landing"
-        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px]"
+        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px] overflow-hidden"
       >
         <div className="flex flex-1 flex-col items-center justify-center py-6 sm:flex-row sm:gap-10">
           <Image
@@ -116,7 +118,9 @@ export default function Home() {
           ></iframe>
         </div>
       </section>
+      <Events/>
       <Departmental/>
+      <Parallelogram/>
     </main>
   );
 }

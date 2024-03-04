@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
+import styles from './Events.module.css'; // Importing CSS module for styling
 
 const Events = () => {
 
@@ -14,10 +15,17 @@ const Events = () => {
         }
     }, []);
     return (
-        <div style={{ width: `${width1}px`, height: `${height1}px` }} className=" h-vh pt-10 flex flex-col ">
-            <div className="w-full h-full flex flex-col items-center justify-center">
-                <h1 className="text-center text-orange text-[200px] uppercase">Events</h1>
-                
+        <div className={styles.container}>
+            <div className={styles.rectangle}></div>
+            <div className={styles.imageContainer}>
+                {/* Assuming your image is in the public directory */}
+                <Image
+                    src="/Campus.jpg"
+                    alt="Description of your image"
+                    layout="responsive"
+                    width={125} // Half the original width
+                    height={75} // Half the original height
+                />
             </div>
         </div>
     )
@@ -53,4 +61,4 @@ export default Events
     </div>
     <div className="w-1/10 h-1/10 origin-top-left rotate-[-1.09deg]" />
 </div>
- */
+ */ 

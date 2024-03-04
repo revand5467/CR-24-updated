@@ -3,7 +3,7 @@ import Image from 'next/image';
 import LogoLanding from '../../public/coming-soon.png';
 const Departmental = () => {
     return (
-        <div className="w-vw h-vh pt-10 flex flex-col" >
+        <div className="w-vw h-vh pt-10 flex flex-col overflow-hidden" >
             <div className="mx-auto">
             <Image
             className="w-[200px] max-w-[300px]  object-contain sm:w-[300px] sm:h-[300px] "
