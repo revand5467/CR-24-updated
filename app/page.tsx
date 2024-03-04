@@ -6,6 +6,7 @@ import CountdownTimer from './components/Countdown';
 import Marquee from 'react-fast-marquee';
 import CollegeAnimate from './components/CollegeAnimate';
 import FadeUp from './components/FadeUp';
+import Departmental from './components/Departments';
 
 export default function Home() {
   return (
@@ -115,6 +116,7 @@ export default function Home() {
           ></iframe>
         </div>
       </section>
+      <Departmental/>
     </main>
   );
 }
