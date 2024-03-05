@@ -12,13 +12,26 @@ const Sponsors = () => {
   });
   return (
     <div>
-      <div className="flex h-screen flex-row justify-between" ref={ref}>
-        <div className="flex  w-1/2 justify-end  text-4xl">
+      <div
+        className="relative flex h-screen flex-row justify-between space-x-5"
+        ref={ref}
+      >
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={inView ? { opacity: 0 } : {}}
+          transition={{ delay: 1.8 }}
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold text-amber-600"
+        >
+          <div className="mb-10 text-white">Our</div>
+          <div className="mb-10">Sponsorsss</div>
+        </motion.div>
+        <div className="  flex  w-1/2 justify-end   text-4xl">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "-100%", opacity: 1 } : {}}
-            transition={{ duration: 4, delay: 0.5 }}
-            className="flex w-full items-center justify-end "
+            transition={{ duration: 3, delay: 0.1 }}
+            exit={{ opacity: 0, transition: { duration: 2 } }}
+            className="mt-20 flex w-full items-center justify-end"
           >
             <Image
               alt="heart right"
@@ -28,16 +41,25 @@ const Sponsors = () => {
           </motion.div>
         </div>
 
-        <div className="flex w-1/2 justify-start text-4xl">
+        <div className=" flex w-1/2 justify-start text-4xl">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "100%", opacity: 1 } : {}}
-            transition={{ duration: 4, delay: 0.5 }}
-            className=" flex w-full items-center "
+            transition={{ duration: 3, delay: 0.1 }}
+            exit={{ opacity: 0, transition: { duration: 2 } }}
+            className=" mt-20 flex w-full items-center"
           >
             <Image alt="heart right" src={heartr} className="h-2/3 w-1/2" />
           </motion.div>
         </div>
+        {/*<motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 2 }}
+          className="w-full text-5xl"
+        >
+          hi
+  </motion.div>*/}
       </div>
     </div>
   );
