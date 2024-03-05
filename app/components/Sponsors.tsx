@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import heartr from "../../public/Heartr.png";
 import Image from "next/image";
+import Reg from "../../public/Reg.png";
 
 const Sponsors = () => {
   const [ref, inView] = useInView({
@@ -16,6 +17,42 @@ const Sponsors = () => {
         className="relative flex h-screen flex-row justify-between space-x-5"
         ref={ref}
       >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 2 }}
+          className=" absolute inset-0 z-50 grid grid-cols-8 justify-center px-8"
+        >
+          <Image alt="Reg logo" src={Reg} className="" />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 1 }}
           animate={inView ? { opacity: 0 } : {}}
