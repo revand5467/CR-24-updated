@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import heartr from "../../public/Heartr.png";
 import Image from "next/image";
 
-const Nameitlater = () => {
+const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
   });
@@ -43,4 +43,4 @@ const Nameitlater = () => {
   );
 };
 
-export default Nameitlater;
+export default Sponsors;

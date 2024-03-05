@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 import CollegeAnimate from "./components/CollegeAnimate";
 import FadeUp from "./components/FadeUp";
 import OurLegacyVideo from "./components/OurLegacyVideo";
-import Nameitlater from "./components/Nameitlater";
+import Sponsors from "./components/Sponsors";
 
 export default function Home() {
   return (
@@ -85,7 +85,7 @@ export default function Home() {
       </section>
       <OurLegacyVideo />
       <section>
-        <Nameitlater />
+        <Sponsors />
       </section>
     </main>
   );
