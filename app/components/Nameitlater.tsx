@@ -16,9 +16,9 @@ const Nameitlater = () => {
         <div className="flex  w-1/2 justify-end bg-yellow-500 text-4xl">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
-            animate={{ x: "-500%", opacity: 1 }}
+            animate={{ x: "-100%", opacity: 1 }}
             transition={{ duration: 4 }}
-            className="bg-red-100"
+            className="w-full bg-red-100"
           >
             H
           </motion.div>
@@ -29,6 +29,7 @@ const Nameitlater = () => {
             initial={{ x: 0, opacity: 1 }}
             animate={{ x: "100%", opacity: 1 }}
             transition={{ duration: 4 }}
+            className="w-full bg-red-100"
           >
             I
           </motion.div>
