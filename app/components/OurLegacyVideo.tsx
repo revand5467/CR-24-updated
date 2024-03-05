@@ -23,18 +23,18 @@ export default function OurLegacyVideo() {
       className="relative my-10 flex h-[200vh] w-full flex-col items-center"
     >
       <motion.div
-        className="z-20 aspect-video max-h-[100vh]"
+        className="z-20 aspect-video max-h-[100vh] min-w-[300px]"
         style={{ width, marginTop }}
       >
         <motion.iframe
           style={{ borderRadius }}
           className="h-full min-h-[200px] w-full"
-          src="https://www.youtube.com/embed/QaXcVAkamxc"
+          src="https://www.youtube.com/embed/QaXcVAkamxc?autoplay=1&mute=1&controls=0&showinfo=0rel=0&loop=1"
           title="CROSSROADS&#39;23 | After Movie | Mar Baselios College of Engineering and Technology"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></motion.iframe>
       </motion.div>
-      <div className="absolute mt-[120vh] aspect-video w-[50%]">
+      <div className="absolute mt-[120vh] aspect-video w-[50%] min-w-[300px]">
         <Image
           src="/legacy.png"
           alt=""
