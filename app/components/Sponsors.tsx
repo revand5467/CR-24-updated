@@ -14,6 +14,8 @@ import south_park from "../../public/south_park.png";
 import mpire from "../../public/mpire.png";
 import mot from "../../public/mot.png";
 import realme from "../../public/realme.png";
+import trident from "../../public/trident.png";
+import sukumar from "../../public/sukumar.png";
 const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
@@ -27,37 +29,49 @@ const Sponsors = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 2, duration: 2 }}
-          className=" absolute inset-0 z-50 grid  grid-cols-4 justify-center px-8 md:grid-cols-8"
+          transition={{ delay: 2 }}
+          className=" absolute inset-0 z-50 flex flex-col justify-center  "
         >
-          <Image alt="Reg logo" src={reg} className=" px-2 md:px-0" />
-          <Image alt="Reg logo" src={penta_hut} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={kims} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={bajaj} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={hll} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={south_park} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={mpire} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={mot} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={realme} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
-          <Image alt="Reg logo" src={reg} className="px-2 md:px-0" />
+          <div className="flex flex-row flex-wrap justify-center space-x-4">
+            <Image alt="reg logo" src={reg} className="" />
+            <Image alt="penta_hut logo" src={penta_hut} className="" />
+            <Image alt="Reg logo" src={kims} className="" />
+            <Image alt="Reg logo" src={bajaj} className="" />
+            <Image alt="Reg logo" src={hll} className="" />
+            <Image alt="Reg logo" src={south_park} className="" />
+            <Image alt="Reg logo" src={mpire} className="" />
+            <Image alt="Reg logo" src={mot} className="" />
+          </div>
+          <div className="flex flex-row flex-wrap justify-center space-x-4">
+            <Image alt="Reg logo" src={realme} className="" />
+            <Image alt="Reg logo" src={trident} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+          </div>
+          <div className="flex flex-row flex-wrap justify-center space-x-4">
+            <Image alt="Reg logo" src={realme} className="" />
+            <Image alt="Reg logo" src={trident} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+          </div>
+          <div className="flex flex-row flex-wrap justify-center space-x-4">
+            <Image alt="Reg logo" src={realme} className="" />
+            <Image alt="Reg logo" src={trident} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={reg} className="" />
+          </div>
         </motion.div>
 
         <motion.div
