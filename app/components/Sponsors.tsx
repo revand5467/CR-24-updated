@@ -20,37 +20,37 @@ const Sponsors = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 2 }}
-          className=" absolute inset-0 z-50 grid grid-cols-8 justify-center px-8"
+          transition={{ delay: 2, duration: 2 }}
+          className=" absolute inset-0 z-50 grid grid-cols-4 justify-center  px-8 md:grid-cols-8 "
         >
-          <Image alt="Reg logo" src={Reg} className="" />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
-          <Image alt="Reg logo" src={Reg} />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
+          <Image alt="Reg logo" src={Reg} className="px-2 md:px-0" />
         </motion.div>
 
         <motion.div
@@ -59,8 +59,8 @@ const Sponsors = () => {
           transition={{ delay: 1.8 }}
           className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold text-amber-600"
         >
-          <div className="mb-10 text-white">Our</div>
-          <div className="mb-10">Sponsorsss</div>
+          <div className=" text-white">Our</div>
+          <div className="mb-20">Sponsorsss</div>
         </motion.div>
         <div className="  flex  w-1/2 justify-end   text-4xl">
           <motion.div
