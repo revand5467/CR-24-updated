@@ -16,6 +16,16 @@ import mot from "../../public/mot.png";
 import realme from "../../public/realme.png";
 import trident from "../../public/trident.png";
 import sukumar from "../../public/sukumar.png";
+import care_mithra from "../../public/care_mithra.png";
+import de_holidays from "../../public/de_holidays.png";
+import babas from "../../public/babas.png";
+import bhima from "../../public/bhima.png";
+import bunker from "../../public/bunker.png";
+import petoria from "../../public/petoria.png";
+import hasnas from "../../public/hasnas.png";
+import turkish_delight from "../../public/turkish_delight.png";
+import helmet_world from "../../public/helmet_world.png";
+import group from "../../public/group.png";
 const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
@@ -42,25 +52,29 @@ const Sponsors = () => {
             <Image alt="Reg logo" src={mpire} className="" />
             <Image alt="Reg logo" src={mot} className="" />
           </div>
+          {/* <div className="flex flex-row flex-wrap justify-center space-x-4">
+            {" "}
+            <Image alt="reg logo" src={group} className="" />
+  </div>*/}
           <div className="flex flex-row flex-wrap justify-center space-x-4">
             <Image alt="Reg logo" src={realme} className="" />
             <Image alt="Reg logo" src={trident} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={sukumar} className="" />
+            <Image alt="Reg logo" src={reg} className="opacity-0" />
+            <Image alt="Reg logo" src={reg} className="opacity-0" />
+            <Image alt="Reg logo" src={care_mithra} className="" />
+            <Image alt="Reg logo" src={de_holidays} className="" />
+            <Image alt="Reg logo" src={babas} className="" />
           </div>
           <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="Reg logo" src={realme} className="" />
-            <Image alt="Reg logo" src={trident} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
-            <Image alt="Reg logo" src={reg} className="" />
+            <Image alt="Reg logo" src={bhima} className="" />
+            <Image alt="Reg logo" src={bunker} className="" />
+            <Image alt="Reg logo" src={petoria} className="" />
+            <Image alt="Reg logo" src={reg} className="opacity-0" />
+            <Image alt="Reg logo" src={reg} className="opacity-0" />
+            <Image alt="Reg logo" src={hasnas} className="" />
+            <Image alt="Reg logo" src={turkish_delight} className="" />
+            <Image alt="Reg logo" src={helmet_world} className="" />
           </div>
           <div className="flex flex-row flex-wrap justify-center space-x-4">
             <Image alt="Reg logo" src={realme} className="" />
@@ -76,7 +90,7 @@ const Sponsors = () => {
 
         <motion.div
           initial={{ opacity: 1 }}
-          animate={inView ? { opacity: 0 } : {}}
+          animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.8 }}
           className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold text-amber-600"
         >
