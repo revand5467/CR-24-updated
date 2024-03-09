@@ -72,7 +72,7 @@ const Sponsors = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.4, duration: 3 }}
-          className=" absolute inset-0 z-50 mt-20 flex flex-col  justify-center"
+          className=" absolute inset-0 z-50 mt-20 flex flex-col  justify-start md:justify-center"
         >
           <div className="flex flex-row flex-wrap justify-center ">
             <Image alt="" src={reg} width={wSize} height={hSize} />
@@ -292,14 +292,15 @@ const Sponsors = () => {
           initial={{ opacity: 1 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.8 }}
-          className="absolute inset-0 z-10 flex h-2/3 flex-col items-center justify-center text-center text-4xl font-bold"
+          className="absolute inset-0 z-10 flex h-2/3 flex-col items-center justify-center text-center text-4xl font-bold "
         >
           <Image alt="star img" src={star} width={30} height={30}></Image>
           <div className="text-white">Our</div>{" "}
           <motion.div
             ref={ref}
-            animate={inView ? "in-view" : "out-of-view"}
-            className={`sponsor-text ${inView ? "in-view" : "out-of-view"}`}
+            animate={inView ? { color: "white" } : { color: "#FFB300" }}
+            transition={{ duration: 2 }}
+            className="text-amber-600"
           >
             Sponsors
           </motion.div>
