@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import heartr from "../../../public/Heartr.png";
 import Image from "next/image";
+
 import reg from "../../../public/logos/reg.png";
 import penta_hut from "../../../public/logos/penta_hut.png";
 import kims from "../../../public/logos/kims.png";
@@ -65,18 +66,51 @@ const Sponsors = () => {
     triggerOnce: false
   });
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const wSize = isMobile ? 90 : 140;
-  const hSize = isMobile ? 50 : 100;
-
+  const wSize = isMobile ? 90 : 130;
+  const hSize = isMobile ? 50 : 90;
+  const isDesktop = window.innerWidth > 768;
+  const animationVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+  const animationTransition = {
+    duration: isDesktop ? 3 : 0,
+    delay: isDesktop ? 1.4 : 0
+  };
   return (
     <div>
-      <div className="relative flex h-screen  justify-between space-x-5" ref={ref}>
+      <div className="relative flex h-screen   justify-between space-x-5" ref={ref}>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 1.4, duration: 3 }}
-          className=" absolute inset-0 z-50 mt-20 flex flex-col  justify-start md:justify-center"
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={animationVariants}
+          transition={animationTransition}
+          className="absolute inset-0 z-50 mt-20 flex flex-col items-center justify-center"
         >
+          <div className="flex flex-col justify-center  text-center text-4xl font-bold">
+            {" "}
+            <div className="flex justify-center">
+              <Image
+                alt="star img"
+                src={star}
+                width={30}
+                height={30}
+                className=" justify-cente flex md:hidden"
+              ></Image>
+            </div>
+            <div className=" text-white md:hidden">Our</div>{" "}
+            <div className=" text-amber-600 md:hidden">Sponsors</div>
+            <div className="flex justify-center">
+              <Image
+                alt="star img"
+                width={30}
+                height={30}
+                src={star}
+                className=" mb-2 flex justify-center md:hidden"
+              ></Image>
+            </div>
+          </div>
           <div className="flex flex-row flex-wrap justify-center ">
             <Image alt="" src={reg} width={wSize} height={hSize} />
             <Image alt="" src={penta_hut} width={wSize} height={hSize} />
@@ -297,17 +331,28 @@ const Sponsors = () => {
           transition={{ delay: 1.8 }}
           className="absolute inset-0 z-10 flex h-2/3 flex-col items-center justify-center text-center text-4xl font-bold "
         >
-          <Image alt="star img" src={star} width={30} height={30}></Image>
-          <div className="text-white">Our</div>{" "}
+          <Image
+            alt="star img"
+            src={star}
+            width={30}
+            height={30}
+            className="hidden md:block"
+          ></Image>
+          <div className="hidden text-white md:block">Our</div>{" "}
           <motion.div
             ref={ref}
-            animate={inView ? { color: "white" } : { color: "#FFB300" }}
             transition={{ duration: 2 }}
-            className="text-amber-600"
+            className="hidden text-amber-600 md:block"
           >
             Sponsors
           </motion.div>
-          <Image alt="star img" width={30} height={30} src={star}></Image>
+          <Image
+            alt="star img"
+            width={30}
+            height={30}
+            src={star}
+            className="hidden md:block"
+          ></Image>
         </motion.div>
         <div className="flex hidden  h-2/3  w-1/2 justify-end   text-4xl md:block">
           <motion.div
