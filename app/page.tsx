@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 import CollegeAnimate from "./components/CollegeAnimate";
 import FadeUp from "./components/FadeUp";
 import OurLegacyVideo from "./components/OurLegacyVideo";
-import Sponsors from "./components/Sponsors";
+import Sponsors from "./components/Sponsors/Sponsors";
 
 export default function Home() {
   return (
