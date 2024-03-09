@@ -6,11 +6,11 @@ import Marquee from "react-fast-marquee";
 import CollegeAnimate from "./components/CollegeAnimate";
 import FadeUp from "./components/FadeUp";
 import OurLegacyVideo from "./components/OurLegacyVideo";
-import Sponsors from "./components/Sponsors/Sponsors";
+import AnimatedSponsor from "./components/AnimatedSponsor";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="max-w-[100vw] overflow-hidden">
       <section
         id="landing"
         className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px]"
@@ -84,9 +84,7 @@ export default function Home() {
         />
       </section>
       <OurLegacyVideo />
-      <section>
-        <Sponsors />
-      </section>
+      <AnimatedSponsor />
     </main>
   );
 }
