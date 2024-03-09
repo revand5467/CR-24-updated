@@ -2,7 +2,7 @@
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import hand from "@/public/hand.png";
+import hand from "@/public/Hand.png";
 import { SponsorList } from "../utils/sponsorList";
 
 export default function AnimatedSponsor() {
