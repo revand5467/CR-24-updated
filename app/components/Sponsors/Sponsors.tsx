@@ -63,118 +63,255 @@ const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
   });
+  const wSize = 140;
+  const hSize = 100;
   return (
     <div>
-      <div
-        className="relative flex h-screen flex-row justify-between space-x-5"
-        ref={ref}
-      >
+      <div className="relative flex h-screen  justify-between space-x-5" ref={ref}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.4, duration: 3 }}
-          className=" absolute inset-0 z-50 flex flex-col justify-center  "
+          className=" absolute inset-0 z-50 mt-20 flex flex-col  justify-center"
         >
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="reg logo" src={reg} className="logos" />
-            <Image alt="penta_hut logo" src={penta_hut} className="logos" />
-            <Image alt="Reg logo" src={kims} className="logos" />
-            <Image alt="Reg logo" src={bajaj} className="logos" />
-            <Image alt="Reg logo" src={hll} className="logos" />
-            <Image alt="Reg logo" src={south_park} className="logos" />
-            <Image alt="Reg logo" src={mpire} className="logos" />
-            <Image alt="Reg logo" src={mot} className="logos" />
+          <div className="flex flex-row flex-wrap justify-center ">
+            <Image alt="" src={reg} width={wSize} height={hSize} />
+            <Image alt="" src={penta_hut} width={wSize} height={hSize} />
+            <Image alt="" src={kims} width={wSize} height={hSize} />
+            <Image alt="" src={bajaj} width={wSize} height={hSize} />
+            <Image alt="" src={hll} width={wSize} height={hSize} />
+            <Image alt="" src={south_park} width={wSize} height={hSize} />
+            <Image alt="" src={mpire} width={wSize} height={hSize} />
+            <Image alt="" src={mot} width={wSize} height={hSize} />
           </div>
 
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="Reg logo" src={realme} className="logos" />
-            <Image alt="Reg logo" src={trident} className="logos" />
-            <Image alt="Reg logo" src={sukumar} className="logos" />
-            <Image alt="Reg logo" src={reg} className="logos opacity-0" />
-            <Image alt="Reg logo" src={reg} className="logos opacity-0" />
-            <Image alt="Reg logo" src={care_mithra} className="logos" />
-            <Image alt="Reg logo" src={de_holidays} className="logos" />
-            <Image alt="Reg logo" src={babas} className="logos" />
+          <div className="flex flex-row flex-wrap justify-center ">
+            <Image alt="" src={realme} width={wSize} height={hSize} />
+            <Image alt="" src={trident} width={wSize} height={hSize} />
+            <Image
+              alt=""
+              src={sukumar}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={reg}
+              width={wSize}
+              height={hSize}
+              className="hidden opacity-0 md:block"
+            />
+            <Image
+              alt=""
+              src={reg}
+              width={wSize}
+              height={hSize}
+              className="hidden opacity-0 md:block"
+            />
+            <Image alt="" src={care_mithra} width={wSize} height={hSize} />
+            <Image alt="" src={de_holidays} width={wSize} height={hSize} />
+            <Image alt="" src={babas} width={wSize} height={hSize} />
           </div>
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="Reg logo" src={bhima} className="logos" />
-            <Image alt="Reg logo" src={bunker} className="logos" />
-            <Image alt="Reg logo" src={petoria} className="logos" />
-            <Image alt="Reg logo" src={reg} className="logos opacity-0" />
-            <Image alt="Reg logo" src={reg} className="logos opacity-0" />
-            <Image alt="Reg logo" src={hasnas} className="logos" />
-            <Image alt="Reg logo" src={turkish_delight} className="logos" />
-            <Image alt="Reg logo" src={helmet_world} className="logos" />
+          <div className="flex flex-row flex-wrap justify-center ">
+            <Image
+              alt=""
+              src={bhima}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={bunker}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={petoria}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={reg}
+              className=" hidden pb-2 pr-2 opacity-0 md:block"
+              width={wSize}
+              height={hSize}
+            />
+            <Image
+              alt=""
+              src={reg}
+              className=" hidden pb-2 pr-2 opacity-0 md:block"
+              width={wSize}
+              height={hSize}
+            />
+            <Image
+              alt=""
+              src={hasnas}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={turkish_delight}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={helmet_world}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
           </div>
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="Reg logo" src={times_of_india} className="logos" />
-            <Image alt="Reg logo" src={mathrubhumi} className="logos" />
-            <Image alt="Reg logo" src={hindu} className="logos" />
-            <Image alt="Reg logo" src={asb} className="logos" />
-            <Image alt="Reg logo" src={rm} className="logos" />
-            <Image alt="Reg logo" src={club_fm} className="logos" />
-            <Image alt="Reg logo" src={romansons} className="logos" />
-            <Image alt="Reg logo" src={wowmomo} className="logos" />
+          <div className="flex flex-row flex-wrap justify-center ">
+            <Image
+              alt=""
+              src={times_of_india}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={mathrubhumi}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={hindu}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image alt="" src={asb} width={wSize} height={hSize} className="pb-2 pr-2" />
+            <Image alt="" src={rm} width={wSize} height={hSize} className="pb-2 pr-2" />
+            <Image alt="" src={club_fm} width={wSize} height={hSize} />
+            <Image alt="" src={romansons} width={wSize} height={hSize} />
+            <Image alt="" src={wowmomo} width={wSize} height={hSize} />
           </div>
-          {/* <div className="flex flex-row flex-wrap justify-center space-x-4">
+          <div className="flex flex-row flex-wrap justify-center ">
             {" "}
-            <Image alt="Reg logo" src={br} className="" />
-            <Image alt="Reg logo" src={ieee} className="" />
-            <Image alt="Reg logo" src={muthoot} className="" />
-            <Image alt="Reg logo" src={ibs} className="" />
-            <Image alt="Reg logo" src={airtel} className="" />
-            <Image alt="Reg logo" src={milma} className="" />
-            <Image alt="Reg logo" src={ksfe} className="" />
-            <Image alt="Reg logo" src={lyceum} className="" />
+            <Image alt="" src={br} width={wSize} height={hSize} className="pb-2 pr-2" />
+            <Image alt="" src={ieee} width={wSize} height={hSize} className="pb-2 pr-2" />
+            <Image
+              alt=""
+              src={muthoot}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image alt="" src={ibs} width={wSize} height={hSize} className="pb-2 pr-2" />
+            <Image
+              alt=""
+              src={airtel}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={milma}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image alt="" src={ksfe} width={wSize} height={hSize} />
+            <Image
+              alt=""
+              src={lyceum}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
           </div>
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
+          <div className="flex flex-row flex-wrap justify-center">
             {" "}
-            <Image alt="Reg logo" src={yardley} className="" />
-            <Image alt="Reg logo" src={triassic} className="" />
-            <Image alt="Reg logo" src={ramachandran} className="" />
-            <Image alt="Reg logo" src={trivandrum} className="" />
-            <Image alt="Reg logo" src={astro} className="" />
-            <Image alt="Reg logo" src={carton} className="" />
-            <Image alt="Reg logo" src={pinnacle} className="" />
-            <Image alt="Reg logo" src={august_cinema} className="" />
+            <Image
+              alt=""
+              src={yardley}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={triassic}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={ramachandran}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={trivandrum}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image
+              alt=""
+              src={astro}
+              width={wSize}
+              height={hSize}
+              className="pb-2 pr-2"
+            />
+            <Image alt="" src={carton} width={wSize} height={hSize} />
+            <Image alt="" src={pinnacle} width={wSize} height={hSize} />
+            <Image alt="" src={august_cinema} width={wSize} height={hSize} />
           </div>
-          <div className="flex flex-row flex-wrap justify-center space-x-4">
+          <div className="flex flex-row flex-wrap justify-center">
             {" "}
-            <Image alt="Reg logo" src={tadka} className="" />
-            <Image alt="Reg logo" src={nexgen} className="" />
-            <Image alt="Reg logo" src={tasty_cook} className="" />
-            <Image alt="Reg logo" src={carmal} className="" />
-            <Image alt="Reg logo" src={lazza} className="" />
-            <Image alt="Reg logo" src={aim_britz} className="" />
-            <Image alt="Reg logo" src={kumbayah} />
-            <Image alt="Reg logo" src={reg} className="opacity-0" />
-</div>*/}
+            <Image alt="" src={tadka} width={wSize} height={hSize} />
+            <Image alt="" src={nexgen} width={wSize} height={hSize} />
+            <Image alt="" src={tasty_cook} width={wSize} height={hSize} />
+            <Image alt="" src={carmal} width={wSize} height={hSize} />
+            <Image alt="" src={lazza} width={wSize} height={hSize} />
+            <Image alt="" src={aim_britz} width={wSize} height={hSize} />
+            <Image alt="" src={kumbayah} width={wSize} height={hSize} />
+            <Image alt="" src={reg} width={wSize} height={hSize} />
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 1 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.8 }}
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold "
+          className="absolute inset-0 z-10 flex h-2/3 flex-col items-center justify-center text-center text-4xl font-bold"
         >
           <Image alt="star img" src={star} width={30} height={30}></Image>
           <div className="text-white">Our</div>{" "}
           <motion.div
-            animate={inView ? { color: "white" } : {}}
-            transition={{ duration: 0.5 }}
-            className="text-amber-600"
+            ref={ref}
+            animate={inView ? "in-view" : "out-of-view"}
+            className={`sponsor-text ${inView ? "in-view" : "out-of-view"}`}
           >
             Sponsors
           </motion.div>
           <Image alt="star img" width={30} height={30} src={star}></Image>
         </motion.div>
-        <div className="  flex  w-1/2 justify-end   text-4xl">
+        <div className="  flex  h-2/3 w-1/2   justify-end text-4xl">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "-120%", opacity: 1 } : {}}
             transition={{ duration: 2, delay: 0.2 }}
             exit={{ opacity: 0, transition: { duration: 2 } }}
-            className="mt-20 flex w-full items-center justify-end"
+            className="mt-28 flex w-full items-center justify-end"
           >
             <Image
               alt="heart right"
@@ -184,13 +321,13 @@ const Sponsors = () => {
           </motion.div>
         </div>
 
-        <div className=" flex w-1/2 justify-start text-4xl">
+        <div className=" flex h-2/3 w-1/2 justify-start text-4xl">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "120%", opacity: 1 } : {}}
             transition={{ duration: 2, delay: 0.2 }}
             exit={{ opacity: 0, transition: { duration: 2 } }}
-            className=" mt-20 flex w-full items-center"
+            className=" mt-28 flex w-full items-center"
           >
             <Image alt="heart right" src={heartr} className=" mt-20 w-1/2" />
           </motion.div>
