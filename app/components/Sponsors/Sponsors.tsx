@@ -58,6 +58,7 @@ import carmal from "../../../public/logos/carmal.png";
 import lazza from "../../../public/logos/lazza.png";
 import aim_britz from "../../../public/logos/aim_britz.png";
 import kumbayah from "../../../public/logos/kumbayah.png";
+import star from "../../../public/star.png";
 const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
@@ -75,19 +76,16 @@ const Sponsors = () => {
           className=" absolute inset-0 z-50 flex flex-col justify-center  "
         >
           <div className="flex flex-row flex-wrap justify-center space-x-4">
-            <Image alt="reg logo" src={reg} className="" />
-            <Image alt="penta_hut logo" src={penta_hut} className="" />
-            <Image alt="Reg logo" src={kims} className="" />
-            <Image alt="Reg logo" src={bajaj} className="" />
-            <Image alt="Reg logo" src={hll} className="" />
-            <Image alt="Reg logo" src={south_park} className="" />
-            <Image alt="Reg logo" src={mpire} className="" />
-            <Image alt="Reg logo" src={mot} className="" />
+            <Image alt="reg logo" src={reg} className="logos" />
+            <Image alt="penta_hut logo" src={penta_hut} className="logos" />
+            <Image alt="Reg logo" src={kims} className="logos" />
+            <Image alt="Reg logo" src={bajaj} className="logos" />
+            <Image alt="Reg logo" src={hll} className="logos" />
+            <Image alt="Reg logo" src={south_park} className="logos" />
+            <Image alt="Reg logo" src={mpire} className="logos" />
+            <Image alt="Reg logo" src={mot} className="logos" />
           </div>
-          {/* <div className="flex flex-row flex-wrap justify-center space-x-4">
-            {" "}
-            <Image alt="reg logo" src={group} className="" />
-  </div>*/}
+
           <div className="flex flex-row flex-wrap justify-center space-x-4">
             <Image alt="Reg logo" src={realme} className="logos" />
             <Image alt="Reg logo" src={trident} className="logos" />
@@ -157,10 +155,18 @@ const Sponsors = () => {
           initial={{ opacity: 1 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1.8 }}
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold text-amber-600"
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-4xl font-bold "
         >
-          <div className=" text-white">Our</div>
-          <div className="mb-20">Sponsors</div>
+          <Image alt="star img" src={star} width={30} height={30}></Image>
+          <div className="text-white">Our</div>{" "}
+          <motion.div
+            animate={inView ? { color: "white" } : {}}
+            transition={{ duration: 0.5 }}
+            className="text-amber-600"
+          >
+            Sponsors
+          </motion.div>
+          <Image alt="star img" width={30} height={30} src={star}></Image>
         </motion.div>
         <div className="  flex  w-1/2 justify-end   text-4xl">
           <motion.div
@@ -173,7 +179,7 @@ const Sponsors = () => {
             <Image
               alt="heart right"
               src={heartr}
-              className="justify-right flex h-2/3 w-1/2 scale-x-[-1]"
+              className="justify-right mt-20  flex w-1/2 scale-x-[-1]"
             />
           </motion.div>
         </div>
@@ -186,7 +192,7 @@ const Sponsors = () => {
             exit={{ opacity: 0, transition: { duration: 2 } }}
             className=" mt-20 flex w-full items-center"
           >
-            <Image alt="heart right" src={heartr} className="h-2/3 w-1/2" />
+            <Image alt="heart right" src={heartr} className=" mt-20 w-1/2" />
           </motion.div>
         </div>
         {/*<motion.div

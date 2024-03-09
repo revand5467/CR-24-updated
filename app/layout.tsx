@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import NavBar from './components/NavBar';
+import type { Metadata } from "next";
+import "./globals.css";
+import NavBar from "./components/NavBar";
 
 export const metadata: Metadata = {
   title: "CrossRoads '24",
-  description: 'Techno cultural fest of MBCET'
+  description: "Techno cultural fest of MBCET"
 };
 
 export default function RootLayout({
@@ -14,6 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <style>{`
+          body {
+            overflow-x: hidden;
+          }
+        `}</style>
       <body className="h-full w-full bg-green font-poppins text-white">
         <NavBar />
         {children}
