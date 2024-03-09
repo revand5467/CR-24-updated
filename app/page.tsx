@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import LogoLanding from '../public/logo_landing.svg';
@@ -12,9 +13,13 @@ import Parallelogram from './components/trial';
 import Loading from './components/Loading';
 
 
+import OurLegacyVideo from "./components/OurLegacyVideo";
+import AnimatedSponsor from "./components/AnimatedSponsor";
+
+
 export default function Home() {
   return (
-    <main className="">
+    <main className="max-w-[100vw] overflow-hidden">
       <section
         id="landing"
         className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px] overflow-hidden"
@@ -53,7 +58,7 @@ export default function Home() {
               width={1080}
               height={1080}
               className="absolute -left-[40px] -top-[30px] h-[30px] w-[30px] "
-              style={{ animationDuration: '4s' }}
+              style={{ animationDuration: "4s" }}
             />
 
             <h1 className="heading">OUR LEGACY</h1>
@@ -66,7 +71,7 @@ export default function Home() {
               width={1080}
               height={1080}
               className="absolute -bottom-[10px] -right-[20px] h-[30px] w-[30px] "
-              style={{ animationDuration: '4s' }}
+              style={{ animationDuration: "4s" }}
             />
           </div>
           <p className="prose mt-6 text-center text-white">
@@ -87,6 +92,7 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
+
 
       <section className=" relative my-10  flex min-h-[300px] w-full items-center justify-center md:min-h-[700px]">
         <div className="absolute top-0 h-full w-full ">
@@ -120,7 +126,11 @@ export default function Home() {
           ></iframe>
         </div>
       </section>
-      <Events/>
+      
+
+      <OurLegacyVideo />
+      <AnimatedSponsor />
+    <Events/>
       <Departmental/>
       <Parallelogram/>
     </main>
