@@ -2,6 +2,7 @@
 import React from "react";
 import "./sponsors.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import heartr from "../../../public/Heartr.png";
@@ -63,8 +64,10 @@ const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: false
   });
-  const wSize = 140;
-  const hSize = 100;
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const wSize = isMobile ? 90 : 140;
+  const hSize = isMobile ? 50 : 100;
+
   return (
     <div>
       <div className="relative flex h-screen  justify-between space-x-5" ref={ref}>
@@ -306,29 +309,29 @@ const Sponsors = () => {
           </motion.div>
           <Image alt="star img" width={30} height={30} src={star}></Image>
         </motion.div>
-        <div className="  flex  h-2/3 w-1/2   justify-end text-4xl">
+        <div className="flex hidden  h-2/3  w-1/2 justify-end   text-4xl md:block">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "-120%", opacity: 1 } : {}}
             transition={{ duration: 2, delay: 0.2 }}
             exit={{ opacity: 0, transition: { duration: 2 } }}
-            className="mt-28 flex w-full items-center justify-end"
+            className=" flex w-full items-center justify-end"
           >
             <Image
-              alt="heart right"
+              alt="heart left"
               src={heartr}
               className="justify-right mt-20  flex w-1/2 scale-x-[-1]"
             />
           </motion.div>
         </div>
 
-        <div className=" flex h-2/3 w-1/2 justify-start text-4xl">
+        <div className="flex hidden h-2/3 w-1/2 justify-start text-4xl md:block">
           <motion.div
             initial={{ x: 0, opacity: 1 }}
             animate={inView ? { x: "120%", opacity: 1 } : {}}
             transition={{ duration: 2, delay: 0.2 }}
             exit={{ opacity: 0, transition: { duration: 2 } }}
-            className=" mt-28 flex w-full items-center"
+            className="  flex w-full items-center"
           >
             <Image alt="heart right" src={heartr} className=" mt-20 w-1/2" />
           </motion.div>
