@@ -1,0 +1,12 @@
+.logos {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.sponsor-text {
+  color: #ffbf00;
+  transition: color 0.5s ease-in-out;
+}
+.sponsor-text.in-view {
+  color: #ffffff;
+}
