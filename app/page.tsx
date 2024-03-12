@@ -8,14 +8,14 @@ import Tiger from '../public/tiger.png';
 import CountdownTimer from './components/Countdown';
 import Marquee from 'react-fast-marquee';
 import CollegeAnimate from './components/CollegeAnimate';
-import FadeUp from './components/FadeUp';
+
 import Departmental from './components/Departments';
 import Events from './components/Events';
 import Parallelogram from './components/trial';
-import Loading from './components/Loading';
+
 import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 
-import Canvas from './Canvas';
+
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
 
