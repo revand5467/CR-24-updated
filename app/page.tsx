@@ -1,5 +1,7 @@
 
 'use client';
+import { inter, mohave, poppins } from "./lib/fonts";
+import  './home.css'
 import Image from 'next/image';
 import LogoLanding from '../public/logo_landing.svg';
 import Tiger from '../public/tiger.png';
@@ -11,6 +13,7 @@ import Departmental from './components/Departments';
 import Events from './components/Events';
 import Parallelogram from './components/trial';
 import Loading from './components/Loading';
+import { RiInstagramLine, RiMailLine } from "react-icons/ri";
 
 import Canvas from './Canvas';
 import OurLegacyVideo from "./components/OurLegacyVideo";
@@ -129,10 +132,45 @@ export default function Home() {
 
 
       <OurLegacyVideo />
-      <AnimatedSponsor />
       <Events />
       <Departmental />
       <Parallelogram />
+      <AnimatedSponsor />
+      <div>
+      <section className="home_footer">
+
+          <div className="text-area">
+            <div className={`${poppins.className} getintouch`}>Get in touch</div>
+            <div className={`${poppins.className} email`}>
+              crossroads@mbcet.ac.in
+            </div>
+          
+          <div className="icon-area">
+            <div className="icons">
+              <RiInstagramLine color="white" size={"50px"} />
+              <RiMailLine color="white" size={"50px"} />
+            </div>
+            <div className="seperator" />
+            <div className="nav">
+              <a href="/" className="text">
+                HOME
+              </a>
+              <a href="#events" className="text">
+                EVENTS
+              </a>
+            </div>
+          </div>
+          <div className="copyright">
+            <h3>© 2024 CROSSROADS</h3>
+            <h4>All Rights Reserved</h4>
+          </div>
+        </div>
+        <div className="rainbow">
+          <img src="/rainbow.png" />
+        </div>
+        </section>
+      </div>
     </main>
+
   );
 }

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { initializeApp } from "firebase/app";
@@ -5,10 +6,13 @@ import { getFirestore } from "firebase/firestore";
 import { db } from '../config.js';
 import { collection, addDoc } from "firebase/firestore"; 
 import { Resend } from "resend";
-
+import { doc, updateDoc } from "firebase/firestore";
+// this is from you export an initialize the app
+import {  getDocs } from "firebase/firestore";
 const resend = new Resend("re_U8HFo8Cu_EEra5QNgzefncMDcmWBuv9XB");
 
-export default function TypeformUI() {
+export default function TypeformUI({onSubmit, rid ,setRid}) {
+
     const [currentStep, setCurrentStep] = useState(1);
     const [formData, setFormData] = useState({});
     const [submitted, setSubmitted] = useState(false); // New state variable
@@ -23,16 +27,51 @@ export default function TypeformUI() {
     const handlePrevious = () => {
         setCurrentStep(currentStep - 1);
     };
+    const incrementRid = () => {
+        const prefix = rid.slice(0, rid.length - 1);
+        const lastChar = rid[rid.length - 1];
+        let nextRid;
 
+        if (lastChar === '9') {
+            const secondLastChar = prefix[prefix.length - 1];
+            if (secondLastChar === 'Z') {
+                const newPrefix = prefix.slice(0, prefix.length - 1) + 'A';
+                nextRid = newPrefix + '0';
+            } else {
+                const newSecondLastChar = String.fromCharCode(secondLastChar.charCodeAt(0) + 1);
+                nextRid = prefix.slice(0, prefix.length - 1) + newSecondLastChar + '0';
+            }
+        } else {
+            nextRid = prefix + String.fromCharCode(lastChar.charCodeAt(0) + 1);
+        }
+        rid = nextRid;
+        
+       setRid(nextRid);
+    };
+    const updateReferralDocument = async (rid) => {
+        try {
+             
+            const referralDocRef = doc(db, "referral","1");
+            
+             await updateDoc(referralDocRef, { rid : rid});
+            
+        } catch (error) {
+            //console.error("Error updating referral document:", error);
+        }
+    }; 
     const handleSubmit = async () => {
         if (validateCurrentStep()) {
-            console.log(JSON.stringify(formData, null, 2));
+            //console.log(JSON.stringify(formData, null, 2));
             try { 
-                const docRef = await addDoc(collection(db, "users"), formData);
-                console.log("Document written with ID: ", docRef.id);
-                
+                incrementRid();
+                const formDataWithRid = { ...formData, rid };
+                //console.log(formDataWithRid);
+                const docRef = await addDoc(collection(db, "users"), formDataWithRid);
+                // console.log("Document written with ID: ", docRef.id);
+                // console.log("this is ",rid);
+                updateReferralDocument(rid);
                 // Send email
-                const { email } = formData.email;
+                // const { email } = formData.email;
                 // try {
                 //     await resend.emails.send({
                 //         from: "dilshandileep6@gmail.com",  
@@ -44,9 +83,11 @@ export default function TypeformUI() {
                 // } catch (error) {
                 //     console.error("Error sending email: ", error);
                 // }
+                
                 setSubmitted(true);
+                onSubmit();
             } catch (e) {
-                console.error("Error adding document: ", e);
+                //console.error("Error adding document: ", e);
             }
         }
     };
@@ -102,7 +143,7 @@ export default function TypeformUI() {
                         name="fullName"
                         value={formData.fullName || ""}
                         onChange={handleInputChange}
-                        className="text-black"
+                        className="text-black w-full p-5"
                         onKeyDown={handleKeyDown}
                     />
                 );
@@ -110,12 +151,12 @@ export default function TypeformUI() {
                 return (
                     <input
                         type="tel"
-                        placeholder="Enter your phone number"
+                        placeholder="Enter your phone number (10 digits)"
                         name="phoneNumber"
                         value={formData.phoneNumber || ""}
                         onChange={handleInputChange}
                         pattern="[0-9]{10}"
-                        className="text-black"
+                        className="text-black w-full p-5"
                         onKeyDown={handleKeyDown}
                     />
                 );
@@ -127,7 +168,7 @@ export default function TypeformUI() {
                         name="college"
                         value={formData.college || ""}
                         onChange={handleInputChange}
-                        className="text-black"
+                        className="text-black w-full p-5"
                         onKeyDown={handleKeyDown}
                     />
                 );
@@ -139,7 +180,7 @@ export default function TypeformUI() {
                         name="email"
                         value={formData.email || ""}
                         onChange={handleInputChange}
-                        className="text-black"
+                        className="text-black w-full p-5"
                         onKeyDown={handleKeyDown}
                     />
                 );
@@ -147,11 +188,11 @@ export default function TypeformUI() {
                 return (
                     <input
                         type="text"
-                        placeholder="Enter your address"
+                        placeholder="Enter your district"
                         name="address"
                         value={formData.address || ""}
                         onChange={handleInputChange}
-                        className="text-black"
+                        className="text-black w-full p-5"
                         onKeyDown={currentStep < totalSteps ? handleKeyDown : null}
                     />
                 );
@@ -161,8 +202,8 @@ export default function TypeformUI() {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="bg-white shadow-md rounded-md p-4 max-w-sm w-full">
+        <div className="flex justify-center items-center h-screen -mt-20">
+            <div className="bg-white shadow-md rounded-md p-4 max-w-[60%] sm:h-[20%] h-[30%] max-h-[60%] w-full">
                 <div className="mb-4">
                     <div className="bg-gray-200 h-2 rounded-full">
                         <div
