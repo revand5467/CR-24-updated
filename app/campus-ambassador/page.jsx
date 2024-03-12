@@ -7,7 +7,7 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import Form from './Form';
 import { db } from '../config.js';
 
-
+//commit
 const Page = () => {
   const [rid, setRid] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
