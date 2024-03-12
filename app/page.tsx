@@ -12,7 +12,7 @@ import Events from './components/Events';
 import Parallelogram from './components/trial';
 import Loading from './components/Loading';
 
-
+import Canvas from './Canvas';
 import OurLegacyVideo from "./components/OurLegacyVideo";
 import AnimatedSponsor from "./components/AnimatedSponsor";
 
@@ -126,13 +126,13 @@ export default function Home() {
           ></iframe>
         </div>
       </section>
-      
+
 
       <OurLegacyVideo />
       <AnimatedSponsor />
-    <Events/>
-      <Departmental/>
-      <Parallelogram/>
+      <Events />
+      <Departmental />
+      <Parallelogram />
     </main>
   );
 }
