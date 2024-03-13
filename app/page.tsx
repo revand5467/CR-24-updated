@@ -1,4 +1,3 @@
-
 'use client';
 import { inter, mohave, poppins } from "./lib/fonts";
 import  './home.css'
@@ -25,7 +24,7 @@ export default function Home() {
     <main className="max-w-[100vw] overflow-hidden">
       <section
         id="landing"
-        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px] overflow-hidden"
+        className="flex  min-h-[85vh] w-full flex-col py-10 pt-[90px]"
       >
         <div className="flex flex-1 flex-col items-center justify-center py-6 sm:flex-row sm:gap-10">
           <Image
@@ -95,42 +94,6 @@ export default function Home() {
           className="absolute  bottom-0 z-[1] w-full "
         />
       </section>
-
-
-      <section className=" relative my-10  flex min-h-[300px] w-full items-center justify-center md:min-h-[700px]">
-        <div className="absolute top-0 h-full w-full ">
-          <div className="relative mx-auto flex h-[300px] items-center  justify-center md:h-[700px] md:w-[60vw] ">
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute left-0 top-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
-
-            <Image
-              src="/legacy.png"
-              alt=""
-              width={1080}
-              height={1080}
-              className="absolute bottom-0 right-0 h-[100px] w-[100px]  animate-spin md:h-[300px] md:w-[300px]"
-              style={{ animationDuration: '4s' }}
-            />
-          </div>
-        </div>
-
-        <div className="z-[1] h-[200px] w-[80vw] md:h-[400px] md:w-[45vw] ">
-          <iframe
-            className="mx-auto h-full w-full rounded-xl "
-            src="https://www.youtube.com/embed/QaXcVAkamxc"
-            title="CROSSROADS&#39;23 | After Movie | Mar Baselios College of Engineering and Technology"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          ></iframe>
-        </div>
-      </section>
-
-
       <OurLegacyVideo />
       <Events />
       <Departmental />

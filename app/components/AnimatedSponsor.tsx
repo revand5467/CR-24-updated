@@ -36,7 +36,7 @@ export default function AnimatedSponsor() {
   return (
     <motion.section
       ref={containerRef}
-      className="relative flex items-center justify-center pt-20"
+      className="relative flex items-center justify-center pt-20 sm:m-[10%]"
     >
       <div className="grid max-w-[90vw] grid-flow-row grid-cols-6 gap-2 md:max-w-[70vw] md:grid-cols-8">
         {SponsorList.map((name, i) => (
