@@ -7,7 +7,7 @@ import Tiger from '../public/tiger.png';
 import CountdownTimer from './components/Countdown';
 import Marquee from 'react-fast-marquee';
 import CollegeAnimate from './components/CollegeAnimate';
-
+import Link from 'next/link';
 import Departmental from './components/Departments';
 import Events from './components/Events';
 import Parallelogram from './components/trial';
@@ -110,8 +110,12 @@ export default function Home() {
           
           <div className="icon-area">
             <div className="icons">
+            <Link href="https://www.instagram.com/crossroadsmbcet/?hl=en">
               <RiInstagramLine color="white" size={"50px"} />
+            </Link>
+            
               <RiMailLine color="white" size={"50px"} />
+              
             </div>
             <div className="seperator" />
             <div className="nav">
