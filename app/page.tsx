@@ -100,7 +100,7 @@ export default function Home() {
       <Parallelogram />
       <AnimatedSponsor />
       <div>
-      <section className="home_footer">
+      <section className="home_footer bg-[#A7295E]">
 
           <div className="text-area">
             <div className={`${poppins.className} getintouch`}>Get in touch</div>
@@ -129,7 +129,7 @@ export default function Home() {
           </div>
         </div>
         <div className="rainbow">
-          <img src="/rainbow.png" />
+          <Image src="/tiger_footer.png"  alt="tiger footer" height={442} width={337}/>
         </div>
         </section>
       </div>
